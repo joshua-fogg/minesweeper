@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', startGame)
 
 // Define your `board` object here!
 var board = {
-  cells:
+  cells:[[0, 1], [0, 2], [1,3], [2,3]]
 }
 
 function startGame () {
