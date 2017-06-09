@@ -39,6 +39,7 @@ function startGame () {
   // Don't remove this function call: it makes the game work!
   lib.initBoard()
   document.addEventListener('click', checkForWin)
+  document.addEventListener('contextclick',checkForWin)
 
 }
 
