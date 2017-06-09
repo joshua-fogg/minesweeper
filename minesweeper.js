@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', startGame)
+document.addEventListener('DOMContentLoaded', startGame);
 
 // Define your `board` object here!
 var board = {
   cells:[
+    { row: 0, col: 0, isMine: true , hidden: true, surroundingMines: 0, isMarked: false},
     { row: 0, col: 1, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
     { row: 0, col: 2, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
     { row: 0, col: 3, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
     { row: 0, col: 4, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
     { row: 1, col: 0, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
-    { row: 0, col: 0, isMine: true , hidden: true, surroundingMines: 0, isMarked: false},
     { row: 1, col: 1, isMine: true,  hidden: true, surroundingMines: 0, isMarked: false},
     { row: 1, col: 2, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
     { row: 1, col: 3, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
@@ -29,7 +29,7 @@ var board = {
     { row: 4, col: 3, isMine: false, hidden: true, surroundingMines: 0, isMarked: false},
     { row: 4, col: 4, isMine: false, hidden: true, surroundingMines: 0, isMarked: false}
   ]
-}
+};
 
 function startGame () {
   for(var i =0; i<board.cells.length; i++){
@@ -37,7 +37,6 @@ function startGame () {
   };
   // Don't remove this function call: it makes the game work!
   lib.initBoard()
-
   document.addEventListener('click', checkForWin)
   document.addEventListener('contextclick',checkForWin)
 }
